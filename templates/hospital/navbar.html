@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+  <style type="text/css">
+    .bs-example {
+      margin: 0px;
+    }
+
+    .navbar {
+      background: #2c3e50;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar-brand {
+      font-size: 15px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-weight: 600;
+      color: #fff;
+    }
+
+    .navbar-nav .nav-item .nav-link {
+      color: #ecf0f1;
+      font-size: 16px;
+      font-weight: 500;
+      padding: 12px 20px;
+      border-radius: 25px;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .navbar-nav .nav-item .nav-link:hover {
+      background-color: #3498db;
+      color: #fff;
+      transform: scale(1.1);
+    }
+
+    .navbar-nav .nav-item .nav-link.active {
+      background-color: #2980b9;
+      color: #fff;
+      transform: scale(1.1);
+    }
+
+    .navbar-toggler {
+      background-color: #ecf0f1;
+      border: none;
+    }
+
+    .navbar-toggler-icon {
+      background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Google_Chrome_icon_%282013%29.svg/32px-Google_Chrome_icon_%282013%29.svg.png');
+    }
+
+    .navbar-collapse {
+      justify-content: space-between;
+    }
+
+    .navbar-nav {
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar-nav .nav-item {
+      margin: 0 10px;
+    }
+
+    .navbar-nav .nav-item:last-child {
+      margin-right: 0;
+    }
+
+    @media (max-width: 991px) {
+      .navbar-nav {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 15px;
+      }
+
+      .navbar-nav .nav-item {
+        margin: 10px 0;
+      }
+
+      .navbar-toggler {
+        margin-right: 10px;
+      }
+      .btn-primary {
+        background-color: #ff416c;
+        border-color: #ff416c;
+        transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+        border-radius: 30px;
+        font-weight: 300;
+        padding: 5px 10px;
+        animation: buttonFadeIn 1s ease-in-out; /* Button fade-in */
+      }
+  
+      /* Button fade-in animation */
+      @keyframes buttonFadeIn {
+        0% {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+  
+      .btn-primary:hover {
+        background-color: #ff7b54;
+        border-color: #ff7b54;
+        transform: scale(1.05);
+        box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.1);
+      }
+  
+    }
+  </style>
+</head>
+
+<body>
+  <div class="bs-example">
+    <nav class="navbar navbar-expand-md navbar-light fixed-top">
+      <a href="/" class="navbar-brand text-white btn btn-primary font-weight-bold mx-2">Home</a>
+      <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+        <div class="navbar-nav">
+          <a href="/adminclick" class="navbar-brand text-white btn btn-primary font-weight-bold mx-2">Admin-Portal</a>
+          <a href="/doctorclick" class="navbar-brand text-white btn btn-primary font-weight-bold mx-2">Doctor-Portal</a>
+          <a href="/patientclick" class="navbar-brand text-white btn btn-primary font-weight-bold mx-2">Patient-Portal</a>
+        </div>
+
+        <div class="navbar-nav">
+          <a href="/weather" class="navbar-brand text-white btn btn-primary font-weight-bold mx-2"> Check Weather</a>
+          <a href="/aboutus" class="navbar-brand text-white btn btn-primary font-weight-bold mx-2">About Us</a>
+          <a href="/contactus" class="navbar-brand text-white btn btn-primary font-weight-bold mx-2">Contact Us</a>
+          
+          <a href="/prescription" class="navbar-brand text-white btn btn-primary font-weight-bold mx-2">Prescription</a>
+          <a href="/nearbyhospital" target="_blank" class="navbar-brand text-white btn btn-primary font-weight-bold mx-2">Nearby Hospitals</a>
+        </div>
+      </div>
+    </nav>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,136 @@
+{% extends 'hospital/homebase.html' %}
+{% load static %}
+
+
+{% block content %}
+
+
+<head>
+  <style media="screen">
+    /* Jumbotron Styles */
+    .jumbotron {
+      margin-top: 0px;
+      margin-bottom: 0px;
+      background-image: url('{% static "images/bgs.jpg" %}');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      height: 100vh; /* Cover entire viewport height */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      position: relative;
+      border-radius: 10px;
+      box-shadow: inset 0 0 300px rgba(0, 0, 0, 0.5);
+      animation: fadeIn 2s ease-in-out; /* Animation for jumbotron fade-in */
+    }
+
+    /* Fade-in animation for jumbotron */
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    /* Clean, Gradient Header with Fade-In Animation */
+    .display-3 {
+      font-size: 3.5rem;
+      font-weight: bold;
+      background: linear-gradient(90deg, #ff7b54, #ff416c);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      animation: textFadeIn 2s ease-in-out; /* Animation for header fade-in */
+    }
+
+    /* Fade-in animation for the header */
+    @keyframes textFadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Button Hover Effect with Scale and Shadow */
+    .btn-primary {
+      background-color: #ff416c;
+      border-color: #ff416c;
+      transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+      border-radius: 30px;
+      font-weight: 600;
+      padding: 15px 30px;
+      animation: buttonFadeIn 1s ease-in-out; /* Button fade-in */
+    }
+
+    /* Button fade-in animation */
+    @keyframes buttonFadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .btn-primary:hover {
+      background-color: #ff7b54;
+      border-color: #ff7b54;
+      transform: scale(1.05);
+      box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Container for text inside jumbotron */
+    .content-container {
+      max-width: 800px;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: 10px;
+    }
+
+    /* Small text below the button */
+    .lead {
+      font-size: 1.3rem;
+      font-weight: 500;
+      color: #fff;
+      letter-spacing: 1px;
+    }
+
+    h3 {
+      font-size: 2rem;
+      color: #fff;
+      font-weight: 500;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<div class="jumbotron">
+  <div class="content-container">
+    <h5 class="display-3">Your Health, Our Priority – Compassionate Care at Its Best!</h5>
+    <h3>Any Emergency?</h3>
+    <br><br>
+    <p class="lead">
+      <a class="btn btn-primary btn-lg" href="/patientclick" role="button">Book Appointment</a>
+    </p>
+  </div>
+</div>
+
+
+{% include "admin/admin_doctor_patient_card.html" %}
+<br><br><br>
+
+
+{% endblock content %}

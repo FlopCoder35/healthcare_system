@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    /*---------------------------------------
+      Footer Styling
+    -----------------------------------------*/
+    footer {
+      padding: 50px 0;
+      background: linear-gradient(135deg, #00c6ff, #0072ff);
+      color: white;
+      text-align: center;
+      font-family: 'Roboto', sans-serif;
+      position: relative;
+      box-shadow: 0px -4px 15px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
+
+    /* Social media icons styling */
+    .footer-social-icons {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      position: relative;
+    }
+
+    .fa {
+      padding: 15px;
+      font-size: 30px;
+      width: 70px;
+      height: 70px;
+      text-align: center;
+      border-radius: 50%;
+      transition: transform 0.4s ease, box-shadow 0.4s ease, opacity 0.3s ease-in-out;
+      cursor: pointer;
+      box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Hover effects for icons */
+    .fa:hover {
+      transform: translateY(-8px) scale(1.15);
+      opacity: 0.9;
+    }
+
+    .fa-facebook {
+      background: #3b5998;
+      color: white;
+    }
+
+    .fa-whatsapp {
+      background: #25d366;
+      color: white;
+    }
+
+    .fa-twitter {
+      background: #1da1f2;
+      color: white;
+    }
+
+    .fa-instagram {
+      background: linear-gradient(45deg, #e1306c, #fd1d1d, #fcb045);
+      color: white;
+    }
+
+    /* Footer copyright text styling */
+    .footer-copyright {
+      margin-top: 40px;
+      font-size: 16px;
+      font-weight: 500;
+      opacity: 0.8;
+      letter-spacing: 1px;
+      transition: opacity 0.3s ease;
+    }
+
+    /* Hover effect for copyright */
+    .footer-copyright:hover {
+      opacity: 1;
+    }
+
+    .footer-copyright p {
+      margin: 10px 0;
+    }
+
+    /* Animations for footer text */
+    .footer-copyright p,
+    .footer-social-icons a {
+      animation: fadeInUp 0.8s ease-out;
+    }
+
+    /* Keyframes for fade-in effect */
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Responsive design for mobile */
+    @media screen and (max-width: 768px) {
+      .footer-social-icons {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .fa {
+        margin: 5px;
+        font-size: 28px;
+        padding: 12px;
+      }
+
+      .footer-copyright {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Footer Section -->
+  <footer>
+    <!-- Social Media Links -->
+    <div class="footer-social-icons">
+      <a href="#" class="fa fa-facebook" title="Facebook"></a>
+      <a href="#" class="fa fa-whatsapp" title="WhatsApp"></a>
+      <a href="#" class="fa fa-instagram" title="Instagram"></a>
+      <a href="#" class="fa fa-twitter" title="Twitter"></a>
+    </div>
+
+    <!-- Copyright Information -->
+    <div class="footer-copyright">
+      <p>Made with ❤️ in India</p>
+      <p>&copy; 2025 Medicare. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+
+</html>
